@@ -1,8 +1,8 @@
-# Age WASM [app](https://agewasm.marin-basic.com)
+# Holocrypt
 
 A simple and secure online client-side Age key generator, encryption and decryption tool built using wasm
 
-View online [here](https://agewasm.marin-basic.com)
+View online [here]()
 
 ## Building
 
@@ -11,7 +11,9 @@ You will need:
 - [Go](https://go.dev/) and `wasm_exec.js` (included with Go)
 - [PNPM](https://pnpm.io/)
 
-Use the provided `Makefile` and execute `make build`.
+Make sure to copy `wasm_exec.js` to `vendor` I need to make the vendor directory
+
+`
 
 See `make help` for descriptions of other targets.
 
