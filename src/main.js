@@ -72,7 +72,7 @@ function clearKeys() {
 // Resets the timer whenever the user interacts with the page
 function resetKeyTimer() {
   clearTimeout(clearKeysTimeout);
-  clearKeysTimeout = setTimeout(clearKeys, 10000); // 60 seconds
+  clearKeysTimeout = setTimeout(clearKeys, 10000); // 10 seconds
 }
 
 // Attach the activity listeners
