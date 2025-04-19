@@ -10,7 +10,7 @@ You will need:
 
 - [Go](https://go.dev/) and `wasm_exec.js` (included with Go)
 - [PNPM](https://pnpm.io/)
-- [Make] Might need to install make `sudo apt install make`
+- [Make]() Might need to install make `sudo apt install make`
 
 Make sure to copy `wasm_exec.js` to `vendor` you need to make the vendor directory too.
 
