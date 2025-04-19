@@ -31,8 +31,6 @@ The final static website will be placed in `dist/`
 Put the contents of `dist` folder on your favorite web server server or open `index.html`.
 There is no binary to run :)
 
----
-
 ## Developement
 
 You can run a developement Vite server with live-reload using `pnpm run dev` (this will not auto-rebuild the WASM).
