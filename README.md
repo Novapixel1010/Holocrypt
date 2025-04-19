@@ -26,18 +26,10 @@ make build
 
 The final static website will be placed in `dist/`
 
-These files can be upload to the server of your liking
-
 ## Usage
 
-Put the `dist` folder on your favorite web server server or open `index.html`.
+Put the contents of `dist` folder on your favorite web server server or open `index.html`.
 There is no binary to run :)
-
----
-
-**Prebuilt files?**
-
-You can grab a generated zip file on the [release page](https://github.com/MarinX/agewasm/releases).
 
 ---
 
