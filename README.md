@@ -16,7 +16,7 @@ Make sure to copy `wasm_exec.js` to `vendor` you need to make the vendor directo
 
 ```shell
 mkdir vendor
-cp /usr/local/go/misc/wasm/wasm_exec.js ~/holocrypt/vendor/
+cp /usr/local/go/misc/wasm/wasm_exec.js ~/Holocrypt/vendor/
 ```
 Now install first then build
 
@@ -31,6 +31,12 @@ The final static website will be placed in `dist/`
 
 Put the contents of `dist` folder on your favorite web server server or open `index.html`.
 There is no binary to run 😄
+
+For example I use `rsync` to copy to my web folder
+
+```shell
+sudo rsync -a --delete dist/ /var/www/Holocrypt/
+```
 
 ## Developement
 
