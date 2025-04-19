@@ -29,7 +29,7 @@ The final static website will be placed in `dist/`
 ## Usage
 
 Put the contents of `dist` folder on your favorite web server server or open `index.html`.
-There is no binary to run :)
+There is no binary to run 😄
 
 ## Developement
 
