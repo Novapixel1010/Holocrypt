@@ -11,13 +11,22 @@ You will need:
 - [Go](https://go.dev/) and `wasm_exec.js` (included with Go)
 - [PNPM](https://pnpm.io/)
 
-Make sure to copy `wasm_exec.js` to `vendor` I need to make the vendor directory
+Make sure to copy `wasm_exec.js` to `vendor` you need to make the vendor directory too.
 
-`
+```shell
+mkdir vendor
+cp /usr/local/go/misc/wasm/wasm_exec.js ~/holocrypt/vendor/
+```
+Now install first then build
 
-See `make help` for descriptions of other targets.
+```shell
+pnpm install
+make build
+```
 
 The final static website will be placed in `dist/`
+
+These files can be upload to the server of your liking
 
 ## Usage
 
