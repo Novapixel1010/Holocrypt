@@ -37,6 +37,9 @@ For example I use `rsync` to copy to my web folder
 ```shell
 sudo rsync -a --delete dist/ /var/www/Holocrypt/
 ```
+* `-a`: archive mode (preserves timestamps, permissions, etc.)
+
+* `--delete`: removes files from `/var/www/Holocrypt/` that no longer exist in `dist/`
 
 ## Developement
 
