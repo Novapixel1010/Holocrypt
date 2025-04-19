@@ -56,6 +56,30 @@ const hideWorking = (element) => {
   }
 };
 
+let clearKeysTimeout;
+
+// Clears the key fields and variables
+function clearKeys() {
+  const pubkey = document.getElementById("pubkey");
+  const privkey = document.getElementById("privkey");
+
+  if (pubkey) pubkey.value = "";
+  if (privkey) privkey.value = "";
+
+  console.log("Keys cleared due to inactivity.");
+}
+
+// Resets the timer whenever the user interacts with the page
+function resetKeyTimer() {
+  clearTimeout(clearKeysTimeout);
+  clearKeysTimeout = setTimeout(clearKeys, 10000); // 60 seconds
+}
+
+// Attach the activity listeners
+["mousemove", "keydown", "mousedown", "touchstart"].forEach((event) => {
+  document.addEventListener(event, resetKeyTimer);
+});
+
 document
   .getElementById("generateKeysForm")
   .addEventListener("submit", function (e) {
@@ -65,6 +89,8 @@ document
     const keys = generateX25519Identity();
     pubkey.value = keys.publicKey;
     privkey.value = keys.privateKey;
+
+    resetKeyTimer(); // Start/reset the auto-clear countdown after generation
   });
 
 document.getElementById("encryptForm").addEventListener("submit", function (e) {
