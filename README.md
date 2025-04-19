@@ -40,4 +40,4 @@ Please format the source files before commiting with `pnpm run format`
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for the full license text.
+This project is licensed under the Apache 2.0 with Commons Clause and Anti Tampering Clause. See the LICENSE file for the full license text.
