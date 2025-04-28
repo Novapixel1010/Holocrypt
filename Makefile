@@ -17,6 +17,7 @@ GOROOT:=$(shell go env GOROOT)
 # has $(foo) as a prerequisite.
 
 # make import: copy the required wasm_exec.js file from the Go toolchain (output in vendor/)
+
 # Variables
 IMPORT = vendor/wasm_exec.js
 

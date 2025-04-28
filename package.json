@@ -1,5 +1,5 @@
 {
-  "name": "agewasm",
+  "name": "Holocrypt",
   "version": "1.1.0",
   "description": "A simple and secure online client-side Age key generator, encryption and decryption tool built using wasm.",
   "scripts": {
