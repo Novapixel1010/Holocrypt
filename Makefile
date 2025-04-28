@@ -17,7 +17,8 @@ GOROOT:=$(shell go env GOROOT)
 # has $(foo) as a prerequisite.
 
 # make import: copy the required wasm_exec.js file from the Go toolchain (output in vendor/)
-import = vendor/wasm_exec.js
+# Variables
+IMPORT = vendor/wasm_exec.js
 
 GO_VERSION := $(shell go env GOVERSION)
 GO_MAJOR := $(shell echo $(GO_VERSION) | cut -d. -f1)
@@ -29,11 +30,13 @@ else
 WASM_EXEC_PATH := $(GOROOT)/lib/wasm/wasm_exec.js
 endif
 
-$(import): $(WASM_EXEC_PATH)
-	mkdir -p vendor
-	cp "$(WASM_EXEC_PATH)" vendor/
+# Rule to copy wasm_exec.js into vendor
+$(IMPORT): $(WASM_EXEC_PATH)
+        mkdir -p vendor
+        cp "$(WASM_EXEC_PATH)" vendor/
 
-import: $(import)
+# import target depends on the file
+import: $(IMPORT)
 
 # make build-wasm: build the WebAssembly module (output in vendor/)
 build-wasm = vendor/age.wasm
